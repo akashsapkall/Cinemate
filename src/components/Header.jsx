@@ -1,4 +1,6 @@
-import { Link, NavLink } from 'react-router-dom'; 
+import { Link, NavLink } from 'react-router-dom';
+import logo from '../assets/logo.png';
+import logo1 from '../assets/logo1.png';
 export const Header=()=>{
 
     const activeclass="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500";
@@ -9,7 +11,7 @@ export const Header=()=>{
             <nav className="bg-white border-gray-200 dark:bg-gray-900">
                 <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <NavLink to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-                    <img src="" className="h-8 text-white" alt="Logo" />
+                    <img src={logo1} className="h-8 text-white" alt="Logo" />
                     <span className="self-center text-2xl font-bold whitespace-nowrap dark:text-white">Cinemate</span>
                 </NavLink>
                 <div className="flex md:order-2">
