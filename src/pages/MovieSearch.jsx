@@ -1,5 +1,7 @@
-export const MovieSearch=()=>{
-    return (
-        <h1>Movi Search</h1>
-    )
-}
+export const MovieSearch = () => {
+  return (
+    <main>
+      <h1>Movi Search</h1>
+    </main>
+  );
+};
