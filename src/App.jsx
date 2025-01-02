@@ -1,4 +1,4 @@
-import { Header } from "./components/Header";
+import { Header,Footer } from "./components";
 import { AllRoutes } from "./routes/AllRoutes"
 
 function App() {
@@ -6,6 +6,7 @@ function App() {
     <>
       <Header />
       <AllRoutes />
+      <Footer />
     </>
   );
 }

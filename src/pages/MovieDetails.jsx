@@ -1,5 +1,7 @@
 export const MovieDetails=()=>{
     return (
-        <h1>Movi Details</h1>
+        <main>
+            <h1>Movi Details</h1>
+        </main>
     )
 }

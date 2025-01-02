@@ -1,5 +1,7 @@
 export const MoviList=()=>{
     return (
-        <h1>Movi List</h1>
+        <main>
+            <h1>Movi List</h1>
+        </main>
     )
 }
