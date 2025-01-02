@@ -1,13 +1,18 @@
+import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import logo from '../assets/logo.png';
-import logo1 from "../assets/logo1.png";
+// import logo1 from "../assets/logo1.png";
 
 export const Header = () => {
+  const [verticalNav, setVearticalNav] = useState(false);
+  const handleClick=()=>{
+    setVearticalNav((vearticalNav)=>!vearticalNav);
+  }
   const activeclass =
-    "block py-2 px-3 text-white bg-blue-700 rounded border border-slate-300 dark:border-white md:bg-transparent md:text-blue-700 md:dark:text-blue-500";
+    "block py-2 px-3 text-white bg-blue-700 rounded dark:border-white md:bg-transparent md:p-0 md:text-blue-700 md:dark:text-blue-500";
 
   const inactiveclass =
-    "block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+    "block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:p-0 md:dark:hover:bg-transparent dark:border-gray-700"
     
   return (
     <>
@@ -29,6 +34,7 @@ export const Header = () => {
               aria-controls="navbar-search"
               aria-expanded="false"
               className="md:hidden text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 me-1"
+              onClick={handleClick}
             >
               <svg
                 className="w-5 h-5"
@@ -79,6 +85,7 @@ export const Header = () => {
               className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
               aria-controls="navbar-search"
               aria-expanded="false"
+              onClick={handleClick}
             >
               <span className="sr-only">Open main menu</span>
               <svg
@@ -99,8 +106,8 @@ export const Header = () => {
             </button>
           </div>
           <div
-            className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
-            id="navbar-search"
+            className={`${verticalNav?"":"hidden"} items-center justify-between w-full md:flex md:w-auto md:order-1"
+            id="navbar-search`}
           >
             <div className="relative mt-3 md:hidden">
               <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
