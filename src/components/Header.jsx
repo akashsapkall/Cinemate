@@ -37,7 +37,7 @@ export const Header = () => {
           >
             <img src={logo} className="h-8 text-white" alt="Logo" />
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-              Cinemate1
+              Cinemate
             </span>
           </NavLink>
 
