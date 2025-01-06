@@ -1,7 +1,15 @@
-export const MovieDetails=()=>{
+import { useParams } from "react-router-dom";
+import { useFetch } from "../hooks/useFetch";
+export const MovieDetails=(path)=>{
+    let params=useParams();
+    const { data:movie}=useFetch(`${path+params.id}`);
     return (
         <main>
-            <h1>Movi Details</h1>
+            <section>
+                <div>
+                    <h1>{movie}</h1>
+                </div>
+            </section>
         </main>
     )
 }
