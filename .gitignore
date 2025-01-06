@@ -24,4 +24,4 @@ dist-ssr
 *.sw?
 # project files
 links.txt
-
+.env
