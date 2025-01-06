@@ -5,12 +5,12 @@ export const AllRoutes=()=>{
     return (
         <div className='dark:bg-slate-800'>
             <Routes>
-                <Route path="/" element={<MoviList />} />
-                <Route path="/search" element={<MovieSearch />} />
-                <Route path="/movie/:id" element={<MovieDetails />} />
-                <Route path="/movie/upcoming" element={<MoviList />} />
-                <Route path="/movie/top" element={<MoviList />} />
-                <Route path="/movie/popular" element={<MoviList />} />
+                <Route path="/" element={<MoviList path={"movie/now_playing"}/>} />
+                <Route path="/search" element={<MovieSearch path={"search"}/>} />
+                <Route path="/movie/:id" element={<MovieDetails path={"movie/"} />} />
+                <Route path="/movie/upcoming" element={<MoviList path={"movie/upcoming"}/>} />
+                <Route path="/movie/top" element={<MoviList path={"movie/top_rated"}/>} />
+                <Route path="/movie/popular" element={<MoviList path={"movie/popular"}/>} />
                 <Route path="*" element={<PageNotFound />} />
             </Routes>
         </div>
