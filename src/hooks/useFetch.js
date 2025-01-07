@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export const useFetch = (path) => {
+export const useFetch = (path, queryTerm = "") => {
   const [data, setData] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -8,7 +8,7 @@ export const useFetch = (path) => {
   useEffect(() => {
     const baseUrl = import.meta.env.VITE_BASE_URL;
     const apiKey = import.meta.env.VITE_API_KEY;
-    const url = `${baseUrl}${path}?api_key=${apiKey}`;
+    const url = `${baseUrl}${path}?api_key=${apiKey}&query=${queryTerm}`;
 
     async function fetchAPI() {
       setLoading(true);
@@ -29,7 +29,7 @@ export const useFetch = (path) => {
     }
 
     fetchAPI();
-  }, [path]);
+  }, [path, queryTerm]); // Added `queryTerm` to dependency array
 
   return { data, error, loading };
 };
