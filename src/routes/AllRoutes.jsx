@@ -6,7 +6,7 @@ export const AllRoutes=()=>{
         <div className='dark:bg-slate-800'>
             <Routes>
                 <Route path="/" element={<MoviList path={"movie/now_playing"}/>} />
-                <Route path="/search" element={<MovieSearch path={"search"}/>} />
+                <Route path="/search" element={<MovieSearch path={"search/movie"}/>} />
                 <Route path="/movie/:id" element={<MovieDetails path={"movie/"} />} />
                 <Route path="/movie/upcoming" element={<MoviList path={"movie/upcoming"}/>} />
                 <Route path="/movie/top" element={<MoviList path={"movie/top_rated"}/>} />
