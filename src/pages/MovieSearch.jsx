@@ -12,12 +12,12 @@ export const MovieSearch = ({ path }) => {
 
   return (
     <main>
-      <section className="pt-6 ml-16">
-        <p className="text-3xl text-gray-700 dark:text-white">
+      <section className="py-7 flex justify-center">
+        <p className="w-4/5 text-3xl text-gray-700 dark:text-white">
           { movies.length>0?`Search Results for '${queryTerm}'`:`No Search Results Found For '${queryTerm}'`}
-        </p>
+        </p>  
       </section>
-      <section className="max-w-7xl mx-auto py-7">
+      <section className="max-w-7xl mx-auto py-2">
         <div className="flex justify-center flex-wrap">
           {movies && 
             movies.map((movie) => ( 
