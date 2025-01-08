@@ -9,7 +9,7 @@ export const MovieDetails = () => {
   useEffect(() => {
     async function fetchApi() {
       const response = await fetch(
-        `${baseUrl}/movie/${params.id}?api_key=${apiKey}`
+        `${baseUrl}movie/${params.id}?api_key=${apiKey}`
       );
       const jsondata = await response.json();
       setData(jsondata || {});
