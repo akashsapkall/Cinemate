@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import logo from "../assets/logo.png";
+import logo from "../assets/logos/2.png";
 
 export const Header = () => {
   const [verticalNav, setVearticalNav] = useState(false);
@@ -41,7 +41,7 @@ export const Header = () => {
             to="/"
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
-            <img src={logo} className="h-8 text-white" alt="Logo" />
+            <img src={logo} className="h-10 text-white" alt="Logo" />
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
               Cinemate
             </span>
