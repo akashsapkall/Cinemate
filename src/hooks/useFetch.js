@@ -9,7 +9,6 @@ export const useFetch = (path, queryTerm = "") => {
     const baseUrl = import.meta.env.VITE_BASE_URL;
     const apiKey = import.meta.env.VITE_API_KEY;
     const url = `${baseUrl}${path}?api_key=${apiKey}&query=${queryTerm}`;
-
     async function fetchAPI() {
       setLoading(true);
       setError(null);
@@ -29,7 +28,7 @@ export const useFetch = (path, queryTerm = "") => {
     }
 
     fetchAPI();
-  }, [path, queryTerm]); // Added `queryTerm` to dependency array
+  }, [path, queryTerm]);
 
   return { data, error, loading };
 };
