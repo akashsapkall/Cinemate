@@ -1,15 +1,17 @@
 import { useSearchParams } from "react-router-dom";
 import { useFetch } from "../hooks/useFetch"; 
 import { MovieCard } from "../components/MovieCard";
+import { useTitle } from "../hooks/useTitle";
 
-export const MovieSearch = ({ path }) => {
+export const MovieSearch = ({ path}) => {
   const [searchParams] = useSearchParams();
   const queryTerm = searchParams.get("q") || "";
   const { data: movies, error, loading } = useFetch(path, queryTerm);
 
+  useTitle(`Search Result For ${queryTerm}`);
+
   if (loading) return (<p className="dark:text-white">Loading...</p>);
   if (error) return <p className="dark:text-white">Error: {error}</p>;
-
   return (
     <main>
       <section className="py-7 flex justify-center">

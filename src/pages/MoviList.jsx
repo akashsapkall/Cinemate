@@ -1,8 +1,10 @@
 
 import { useFetch } from "../hooks/useFetch";
 import { MovieCard } from "../components/MovieCard";
-export const MoviList = ({path}) => {
+import { useTitle } from "../hooks/useTitle";
+export const MoviList = ({path, title}) => {
   const { data: movies , error, loading} = useFetch(path);
+  useTitle(title);
   if( loading ){
     return (
       <main>

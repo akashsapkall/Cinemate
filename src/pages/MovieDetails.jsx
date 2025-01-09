@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { useTitle } from "../hooks/useTitle";
 
 export const MovieDetails = () => {
   const params = useParams();
@@ -19,6 +20,7 @@ export const MovieDetails = () => {
     }
     fetchApi();
   }, [params.id]);
+  useTitle(movie.title);
   return (
     <main>
       <section className="flex justify-around flex-wrap py-5">
