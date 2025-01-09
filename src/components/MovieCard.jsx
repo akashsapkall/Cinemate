@@ -2,7 +2,8 @@ import { Link } from 'react-router-dom';
 
 export const MovieCard = ({ movie }) => {
   const { id, original_title, overview, poster_path }=movie;
-  const imgurl=poster_path?`https://image.tmdb.org/t/p/w500/${poster_path}`:"";
+  console.log(movie);
+  const imgurl=poster_path?`https://image.tmdb.org/t/p/w500${poster_path}`:"";
   return (
     <>
       <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-3">
