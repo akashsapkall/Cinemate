@@ -36,7 +36,7 @@ export const MovieDetails = () => {
             {(movie.genres || []).map((obj) => (
               <span
                 key={obj.id}
-                className="py-1 px-2 mr-4 rounded border border-slate-600"
+                className="py-1 px-2 mr-4 my-2 rounded border border-slate-600"
               >
                 {obj.name}
               </span>

@@ -25,6 +25,7 @@ export const Header = () => {
     event.preventDefault();
     const queryTerm = event.target.search.value;
     event.target.reset();
+    setVearticalNav((vearticalNav) => !vearticalNav);
     return navigate(`/search?q=${queryTerm}`);
   };
   const activeclass =
