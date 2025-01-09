@@ -9,6 +9,7 @@ export default {
     extend: {
       screens:{
         'md':'802px',
+        'lg':'1054px',
         "other":{'min':'340px','max':'1268px'}
       }
     },
