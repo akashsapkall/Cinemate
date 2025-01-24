@@ -3,17 +3,17 @@ import { useFetch } from "../hooks/useFetch";
 import { MovieCard } from "../components/MovieCard";
 import { useTitle } from "../hooks/useTitle";
 
-export const MovieSearch = ({ path}) => {
+export const MovieSearch = ({ pathway }) => {
   const [searchParams] = useSearchParams();
   const queryTerm = searchParams.get("q") || "";
-  const { data: movies, error, loading } = useFetch(path, queryTerm);
+  const { data: movies, error, loading } = useFetch(pathway, queryTerm);
 
   useTitle(`Search Result For ${queryTerm}`);
 
   if (loading) return (<p className="dark:text-white">Loading...</p>);
   if (error) return <p className="dark:text-white">Error: {error}</p>;
   return (
-    <main>
+    <main className="dark:bg-gray-800">
       <section className="py-7 flex justify-center">
         <p className="w-4/5 text-3xl text-gray-700 dark:text-white">
           { movies.length>0?`Search Results for '${queryTerm}'`:`No Search Results Found For '${queryTerm}'`}

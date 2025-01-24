@@ -47,5 +47,5 @@ export const useFetch = (path, queryTerm = "") => {
     return () => fetchAbort();
   }, [fetchApi]);
 
-  return { data, error, loading };
+  return {data, error, loading};
 };

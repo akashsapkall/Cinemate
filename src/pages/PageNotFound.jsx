@@ -4,7 +4,7 @@ import { useTitle } from '../hooks/useTitle';
 export const PageNotFound = () => {
   useTitle("Page Not Found");
   return (
-    <main>
+    <main className="dark:bg-gray-800" >
       <div className="py-36 md:py-24">
         <div className="w-48 mx-auto">
           <img src={pageNotFound} alt="page not found img" />
