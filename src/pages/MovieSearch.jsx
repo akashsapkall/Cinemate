@@ -13,7 +13,7 @@ export const MovieSearch = ({ pathway }) => {
   if (loading) return (<p className="dark:text-white">Loading...</p>);
   if (error) return <p className="dark:text-white">Error: {error}</p>;
   return (
-    <main className="dark:bg-gray-800">
+    <main>
       <section className="py-7 flex justify-center">
         <p className="w-4/5 text-3xl text-gray-700 dark:text-white">
           { movies.length>0?`Search Results for '${queryTerm}'`:`No Search Results Found For '${queryTerm}'`}

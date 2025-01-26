@@ -1,5 +1,5 @@
 
-import { useFetch } from "../hooks/useFetch";
+// import { useFetch } from "../hooks/useFetch";
 import { MovieCard } from "../components/MovieCard";
 import { useTitle } from "../hooks/useTitle";
 import { useLoaderData } from "react-router-dom";
@@ -22,7 +22,7 @@ export const MoviList = ({title}) => {
   //   )
   // }
   return (
-    <main className="dark:bg-gray-800">
+    <main>
       <section className="w-scren py-7">
         <div className="mx-auto flex justify-center flex-wrap">
           {movies.map((movie) => (

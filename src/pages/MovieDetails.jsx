@@ -22,7 +22,7 @@ export const MovieDetails = () => {
   }, [params.id]);
   useTitle(movie.title);
   return (
-    <main className="dark:bg-gray-800">
+    <main>
       <section className="flex justify-around flex-wrap py-5">
         <div className="max-w-96">
           <img src={image} alt={movie.title} className="rounded" />
